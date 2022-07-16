@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		
+		<meta charset="utf-8">
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+		<!-- <script type="module" src="index.js"></script> -->
+		<script type="module" src="main.js">
+			console.log('this is ignored');
+		</script>
+		<script type="module" src="myapex.js">
+		</script>
+		<script type="module">
+			import uppercase from '/uppercase.js';
+			console.log(uppercase);
+		</script>
+
+		<title>Basic JavaScript module example</title>
+	</head>
+
+	<body>
+		<div id="chart">
+		</div>
+	</body>
+
+</html>
