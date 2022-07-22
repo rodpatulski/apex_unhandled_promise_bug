@@ -14,6 +14,7 @@ test('use jsdom in a test file', () => {
 	//const other = global.document.getElementsByTagName('p');
 
 	console.log('************');
+	console.log(global);
 	//console.log(`Root is ${root}`);
 	console.log(`Object is  ${mychart}`);
 	console.log(`Length is  ${document.getElementsByTagName('*').length}`);
