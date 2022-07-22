@@ -1,4 +1,4 @@
-//import ApexCharts from 'apexcharts';
+import ApexCharts from 'apexcharts';
 import uppercase from './uppercase.js';
 
 console.log(uppercase('hello in myapex'));
@@ -18,4 +18,5 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 
-chart.render();
+export default chart;
+//chart.render();

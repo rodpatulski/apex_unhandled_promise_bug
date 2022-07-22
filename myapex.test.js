@@ -2,19 +2,22 @@
  * @jest-environment jsdom
  */
 
+import chart from './myapex.js';
+
 test('use jsdom in a test file', () => {
-	const element = global.document.createElement('div');
-	element.id = 'myid';
+	const element = document.createElement('div');
+	element.id = 'chart';
 	
 	//const root = global.document.getElementById('root');
-	global.document.body.appendChild(element);
+	document.body.appendChild(element);
+
+	chart.render();
 
 
-	const mychart = global.document.getElementById("myid");
+	const mychart = document.getElementById("chart");
 	//const other = global.document.getElementsByTagName('p');
 
 	console.log('************');
-	console.log(global);
 	//console.log(`Root is ${root}`);
 	console.log(`Object is  ${mychart}`);
 	console.log(`Length is  ${document.getElementsByTagName('*').length}`);
