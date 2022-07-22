@@ -7,9 +7,7 @@ const config = {
 		color: 'blue',
 	},
 	testEnvironment: 'jsdom',
-	testEnvironmentOptions: {
-		html: "<p id=\"root\"></p>"
-    }
+	testEnvironmentOptions: {}
 };
 
 module.exports = config;
