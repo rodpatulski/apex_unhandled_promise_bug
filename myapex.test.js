@@ -10,11 +10,11 @@ beforeAll(() => {
 import chart from './myapex.js';
 
 test('use jsdom in a test file', () => {
-	const element = document.createElement('div');
-	element.id = 'chart';
+	//const element = document.createElement('div');
+	//element.id = 'chart';
 	
 	//const root = global.document.getElementById('root');
-	document.body.appendChild(element);
+	//document.body.appendChild(element);
 
 	console.log(`The value of chart is ${chart}`);
 
