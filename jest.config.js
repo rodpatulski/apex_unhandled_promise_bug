@@ -7,7 +7,8 @@ const config = {
 		color: 'blue',
 	},
 	testEnvironment: 'jsdom',
-	testEnvironmentOptions: {}
+	testEnvironmentOptions: {
+	}
 };
 
 module.exports = config;

@@ -16,6 +16,7 @@ var options = {
 	}
 }
 
+console.log(`in m apex, query selector value for charat = ${chart}`);
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 
 export default chart;
