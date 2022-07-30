@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  * @jest-environment-options {"html": "<html><div id='chart'</html>"}
  */
+require('./__mocks__/ResizeObserver.js');
 
 beforeAll(() => {
 	console.log('INSIDE BEFOREALL');
