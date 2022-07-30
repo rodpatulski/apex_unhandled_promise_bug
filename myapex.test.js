@@ -2,7 +2,9 @@
  * @jest-environment jsdom
  * @jest-environment-options {"html": "<html><div id='chart'</html>"}
  */
-require('./__mocks__/ResizeObserver.js');
+
+// the ResizeObserver import is to create window.ResizeObserver which is not present in jsdom I assume
+import ResizeObserver from './__mocks__/ResizeObserver';
 
 beforeAll(() => {
 	console.log('INSIDE BEFOREALL');
