@@ -3,7 +3,9 @@
  * @jest-environment-options {"html": "<html><div id='chart'</html>"}
  */
 
-// the ResizeObserver import is to create window.ResizeObserver which is not present in jsdom I assume
+/* NOTE #CHART IS DEFINED ABOVE ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
+
+// the ResizeObserver import is to create window.ResizeObserver which is not present in jsdom I assumet
 import ResizeObserver from './__mocks__/ResizeObserver';
 
 beforeAll(() => {
