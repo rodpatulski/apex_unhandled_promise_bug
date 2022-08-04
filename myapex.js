@@ -1,8 +1,6 @@
 import ApexCharts from 'apexcharts';
 import uppercase from './uppercase.js';
 
-console.log(uppercase('hello in myapex'));
-
 var options = {
 	chart: {
 		type: 'bar'

@@ -1,6 +1,6 @@
 /**
  * @jest-environment jsdom
- * @jest-environment-options {"html": "<html><div id='chart'</html>"}
+ * @jest-environment-options {"html": "<html><div data-id='chart' id='chart'>hello</div></html>"}
  */
 
 /* NOTE #CHART IS DEFINED ABOVE ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ */
@@ -8,13 +8,23 @@
 // the ResizeObserver import is to create window.ResizeObserver which is not present in jsdom I assumet
 import ResizeObserver from './__mocks__/ResizeObserver';
 
-beforeAll(() => {
-	console.log('INSIDE BEFOREALL');
-});
+
+// query utilities:
+import {
+	getByLabelText,
+	getByText,
+	getByTestId,
+	queryByTestId,
+	findByText,
+	// Tip: all queries are also exposed on an object
+	// called "queries" which you could import here as well
+	waitFor,
+	screen
+} from '@testing-library/dom'
 
 import chart from './myapex.js';
 
-test('use jsdom in a test file', () => {
+test('draw a chart', () => {
 	//const element = document.createElement('div');
 	//element.id = 'chart';
 	
@@ -42,4 +52,13 @@ test('use jsdom in a test file', () => {
 	//expect(mychart).toHaveLength(1);
 	//expect(mychart.length).toBeGreaterThan(0);
 	expect(mychart).not.toBeNull();
+});
+
+
+/* use this command to only run this test
+npm run test -- -t 'use dom testing library'
+*/
+test('use dom testing library', () => {
+	let div = screen.getByTestId('chart');
+	console.log(screen);
 });
